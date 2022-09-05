@@ -1,15 +1,21 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import logo from './../assets/logo.jpg'
 
 function Sidebar() {
     return (
         <header className='header'>
-            <div>
-                <h1>HRnet<span>.</span></h1>
+            <div className='header__wrapper'>
+                <div className='header__wrapper__title'>
+                    <h1>HRnet<span className='header__wrapper__title__point'>.</span></h1>
+                </div>
+                <nav className='header__wrapper__nav'>
+                    <NavLink to='/create-employee' >Create Employee</NavLink>
+                    <NavLink to='/employee-list'>Employee List</NavLink>
+                </nav>
             </div>
-            <nav>
-                <Link to='#'>Create Employee</Link>
-                <Link to='#'>Employee List</Link>
-            </nav>
+            <div className='header__wrapper'>
+                <img className='header__wrapper__company-logo' src={logo} alt="Wealth Health logo"></img>
+            </div>
         </header>
     )
 }
