@@ -1,0 +1,73 @@
+.create-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    &__title{
+        background: white;
+        border-radius: 0.5em;
+        padding: 2rem;
+    }
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2em;
+        &__fieldset {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 1em;
+            background: white;
+            border-radius: 0.5em;
+            padding: 2rem;
+            border: none;
+            &__wrapper {
+                display: flex;
+                flex-direction: column;
+                flex: 1
+            }
+            legend {
+                font-size: 18px;
+                padding: 0.6em 1.5em;
+                border-radius: 0.5em;
+                background: $greyDark;
+                color: white;
+            }
+            label {
+                margin-right: 1em;
+                margin-bottom: 0.5em;
+            }
+            input {
+                border: none;
+                padding: 0.3em 0.5em;
+                background-color: $lightDark;
+                border-radius: 0.5em;
+                &:focus {
+                    outline: 2px solid $primaryDarken;
+                }
+            }
+            select {
+                border: none;
+                padding: 0.3em 0.5em;
+                background-color: $lightDark;
+                border-radius: 0.5em;
+            }
+        }
+        &__submit {
+            display: flex;
+            align-self: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+            &__button {
+                border: none;
+                padding: 0.6em 1.5em;
+                background-color: $primaryLighten;
+                border-radius: 0.5em;
+                font-size: 16px;
+                font-weight: 600;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}

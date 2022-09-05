@@ -16,8 +16,8 @@ function App() {
       <main className="main">
         <Routes>
           <Route path="/" element={<Navigate to="create-employee"></Navigate>}></Route>
-          <Route path="/create-employee" element={CreateEmployee}></Route>
-          <Route path="/employee-list" element={EmployeeList}></Route>
+          <Route path="/create-employee" element={<CreateEmployee />}></Route>
+          <Route path="/employee-list" element={<EmployeeList />}></Route>
         </Routes>
       </main>
     </BrowserRouter>

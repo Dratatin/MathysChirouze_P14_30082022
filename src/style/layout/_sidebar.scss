@@ -5,7 +5,11 @@
     flex-direction: column;
     width: 15vw;
     height: 100vh;
+    min-width: 205px;
     padding: 2em 0;
+    position: sticky;
+    left: 0;
+    top: 0;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -26,14 +30,13 @@
                 margin: 0.4em;
                 background: white;
                 position: relative;
+                border-radius: 0.5em;
                 &:hover {
                     background: $lightDark;
                     transition: background 0.5s ease-in-out;
-                    border-radius: 0.5em;
                 }
                 &.active {
                     color: $primaryLighten;
-                    font-weight: 600;
                 }
             }
         }

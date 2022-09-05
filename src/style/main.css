@@ -9,9 +9,20 @@
 a {
   color: #000;
   text-decoration: none;
+  font-weight: 600;
 }
 
-body {
+label {
+  font-weight: 600;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body, select, input {
   font-family: "Open Sans", sans-serif;
 }
 
@@ -31,7 +42,11 @@ body {
           flex-direction: column;
   width: 15vw;
   height: 100vh;
+  min-width: 205px;
   padding: 2em 0;
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 .header__wrapper {
   display: -webkit-box;
@@ -69,18 +84,129 @@ body {
   margin: 0.4em;
   background: white;
   position: relative;
+  border-radius: 0.5em;
 }
 .header__wrapper__nav a:hover {
   background: #f2f2f2;
   -webkit-transition: background 0.5s ease-in-out;
   -o-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
-  border-radius: 0.5em;
 }
 .header__wrapper__nav a.active {
   color: #96A61B;
-  font-weight: 600;
 }
 .header__wrapper__company-logo {
   width: 120px;
+}
+
+.main {
+  background: #f2f2f2;
+  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3em;
+}
+
+.create-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+.create-section__title {
+  background: white;
+  border-radius: 0.5em;
+  padding: 2rem;
+}
+.create-section__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+}
+.create-section__form__fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 1em;
+  background: white;
+  border-radius: 0.5em;
+  padding: 2rem;
+  border: none;
+}
+.create-section__form__fieldset__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.create-section__form__fieldset legend {
+  font-size: 18px;
+  padding: 0.6em 1.5em;
+  border-radius: 0.5em;
+  background: #333333;
+  color: white;
+}
+.create-section__form__fieldset label {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+.create-section__form__fieldset input {
+  border: none;
+  padding: 0.3em 0.5em;
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+}
+.create-section__form__fieldset input:focus {
+  outline: 2px solid #667309;
+}
+.create-section__form__fieldset select {
+  border: none;
+  padding: 0.3em 0.5em;
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+}
+.create-section__form__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+}
+.create-section__form__submit__button {
+  border: none;
+  padding: 0.6em 1.5em;
+  background-color: #96A61B;
+  border-radius: 0.5em;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
