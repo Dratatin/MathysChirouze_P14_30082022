@@ -7,7 +7,8 @@ import {
 import Sidebar from "./layout/Sidebar";
 import CreateEmployee from "./pages/CreateEmployee";
 import EmployeeList from "./pages/EmployeeList";
-import "./style/main.css"
+import "react-widgets/scss/styles.scss";
+import "./style/main.css";
 
 function App() {
   return (

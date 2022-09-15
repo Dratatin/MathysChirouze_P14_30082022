@@ -9,8 +9,14 @@ function Sidebar() {
                     <h1>HRnet<span className='header__wrapper__title__point'>.</span></h1>
                 </div>
                 <nav className='header__wrapper__nav'>
-                    <NavLink to='/create-employee' >Create Employee</NavLink>
-                    <NavLink to='/employee-list'>Employee List</NavLink>
+                    <ul className='header__wrapper__nav__list'>
+                        <li>
+                            <NavLink to='/create-employee' >Create Employee</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/employee-list'>Employee List</NavLink>
+                        </li>
+                    </ul>
                 </nav>
             </div>
             <div className='header__wrapper'>

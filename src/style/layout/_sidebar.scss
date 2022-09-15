@@ -23,20 +23,25 @@
         }
         &__nav {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            a {
-                padding: 0.6em 1em;
-                margin: 0.4em;
-                background: white;
-                position: relative;
-                border-radius: 0.5em;
-                &:hover {
-                    background: $lightDark;
-                    transition: background 0.5s ease-in-out;
-                }
-                &.active {
-                    color: $primaryLighten;
+            &__list {
+                display: flex;
+                flex-direction: column;
+                a {
+                    padding: 0.6em 1em;
+                    margin: 0.4em;
+                    background: white;
+                    position: relative;
+                    border-radius: $border-radius;
+                    display: block;
+                    text-align: center;
+                    &:hover {
+                        background: $lightDark;
+                        transition: background 0.5s ease-in-out;
+                    }
+                    &.active {
+                        color: $primaryLighten;
+                    }
                 }
             }
         }

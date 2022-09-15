@@ -4,4 +4,7 @@ $primaryLighten:#96A61B;
 $primaryLightest: #EAF2CE;
 
 $lightDark: lighten(#000, 95%);
-$greyDark: lighten(#000, 20%);
+$greyLight: lighten(#000, 80%);
+$greyDarken: lighten(#000, 20%);
+
+$border-radius: 0.5rem;
