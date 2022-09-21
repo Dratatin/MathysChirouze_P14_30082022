@@ -1,0 +1,48 @@
+.employee-form {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 2em;
+        background: white;
+        border-radius: $border-radius;
+        padding: 2rem;
+        border: none;
+        legend {
+            font-size: 18px;
+            padding: 0.4em 1.3em;
+            border-radius: $border-radius;
+            background: $greyDarken;
+            color: white;
+        }
+    }
+    &__submit {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2em;
+        width: 100%;
+        &__button {
+            border: none;
+            padding: 0.4em 1.3em;
+            background-color: $primary;
+            border-radius: $border-radius;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                background: $primaryLighten;
+                transition: background 0.5s ease-in-out;
+            }
+            &--invalid {
+                pointer-events: none;
+                background: $greyLight;
+            }
+        }
+    }
+}

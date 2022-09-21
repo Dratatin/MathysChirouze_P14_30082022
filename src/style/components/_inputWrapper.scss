@@ -1,0 +1,35 @@
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    label {
+        margin-right: 1em;
+        margin-bottom: 0.3em;
+    }
+    &__input {
+        border: none;
+        padding: 0.3rem 0.5rem;
+        background-color: $lightDark;
+        border-radius: $border-radius;
+        font-size: 1em;
+        &:focus {
+            outline: 2px solid $primaryDarken;
+            background-color: $primaryLightest;
+        }
+        &--valid {
+            background-color: $primaryLightest;
+        }
+        &--error {
+            background-color: lighten(red, 45);
+            &:focus {
+                outline: 2px solid darken(red, 5);
+                background-color: lighten(red, 45);
+            }
+        }
+    }
+    &__error {
+        font-size: 12px;
+        margin-top: 0.3rem;
+        color: #FF0C03;
+    }
+}

@@ -8,20 +8,15 @@
   $widget-bg: $lightDark,
 
   $input-border-color: #fff,
+  $input-focus-bg: $primaryLightest,
   $input-focus-border-color: $primaryDarken,
+  // $input-focus-bg: $primaryLightest,
   $input-box-shadow: 0 0 0 0,
   $input-border-width: 2px,
   $input-height:33px,
 
   $picker-btn-padding-right: 2px,
+  $picker-btn-active-bg: $primaryLightest,
 
   $list-selected-bg: $primary,
 );
-
-.rw-popup {
-  box-shadow: none;
-}
-
-.rw-widget-picker {
-  grid-template: 1fr/1fr 3rem;
-}

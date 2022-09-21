@@ -1,0 +1,11 @@
+.section-heading {
+    background: white;
+    border-radius: $border-radius;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    &__img {
+        width: 2rem;
+        margin-right: 5px;
+    }
+}

@@ -1,0 +1,47 @@
+.inputDate-wrapper {
+    &__input {
+        &.rw-state-focus {
+            .rw-input {
+                    background-color: $primaryLightest;  
+                }
+            }
+        .rw-popup {
+            box-shadow: none;
+        }
+        .rw-widget-picker {
+            grid-template: 1fr/1fr 3rem;
+        }
+        &--error {
+            .rw-picker-btn {
+                &:hover {
+                    background-color: lighten(red, 35);
+                }
+            }
+            &.rw-state-focus {
+                .rw-widget-picker {
+                    border-color: darken(red, 5);
+                    .rw-input {
+                        background-color: lighten(red, 45);
+                    }
+                    .rw-picker-btn {
+                        &:hover {
+                            background-color: lighten(red, 45);
+                        }
+                    }
+                }
+            }
+            .rw-input {
+                background-color: lighten(red, 45);
+                & + button {
+                    background-color: lighten(red, 45);
+                }          
+            }
+        }
+    }
+    &__error {
+        font-size: 12px;
+        margin-top: 0.3rem;
+        color: #FF0C03;
+    }
+}
+  

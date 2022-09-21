@@ -1,4 +1,4 @@
-const states = [
+export const states = [
     {
         "name": "Alabama",
         "abbreviation": "AL"
@@ -237,4 +237,7 @@ const states = [
     }
 ];
 
-export default states
+export let statesName = [];
+states.forEach(element => {
+    statesName.push(element.name)
+});

@@ -15,6 +15,11 @@
 @import 'layout/main';
 
 //components
+@import 'components/employeeHeading';
+@import 'components/employeeForm';
+@import 'components/inputWrapper';
+@import 'components/inputDropdownWrapper';
+@import 'components/inputDateWrapper';
 
 //pages
 @import 'pages/createEmployee';

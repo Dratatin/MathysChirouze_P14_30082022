@@ -81,7 +81,7 @@ fieldset[disabled] .rw-btn {
 }
 
 .rw-picker-btn:active {
-  background-color: #dee2e6;
+  background-color: #EAF2CE;
 }
 
 .rw-picker-btn:disabled, fieldset[disabled] .rw-picker-btn {
@@ -145,6 +145,7 @@ fieldset[disabled] .rw-widget {
 }
 
 .rw-state-focus .rw-widget-picker {
+  background-color: #EAF2CE;
   border-color: #667309;
   -webkit-box-shadow: 0 0 0 0;
           box-shadow: 0 0 0 0;
@@ -357,6 +358,7 @@ fieldset[disabled] .rw-widget {
 }
 
 .rw-listbox.rw-state-focus {
+  background-color: #EAF2CE;
   border-color: #667309;
   -webkit-box-shadow: 0 0 0 0, 0 0 0 0;
           box-shadow: 0 0 0 0, 0 0 0 0;
@@ -1087,15 +1089,6 @@ fieldset[disabled] .rw-widget {
           flex: 1 1 0;
 }
 
-.rw-popup {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.rw-widget-picker {
-  grid-template: 1fr/1fr 3rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -1216,18 +1209,7 @@ body, select, input {
   padding: 3em;
 }
 
-.create-employee {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 14px;
-  gap: 2em;
-}
-.create-employee__heading {
+.section-heading {
   background: white;
   border-radius: 0.5rem;
   padding: 2rem;
@@ -1238,11 +1220,12 @@ body, select, input {
       -ms-flex-align: center;
           align-items: center;
 }
-.create-employee__heading__img {
+.section-heading__img {
   width: 2rem;
   margin-right: 5px;
 }
-.create-employee__form {
+
+.employee-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1253,7 +1236,7 @@ body, select, input {
       flex-wrap: wrap;
   gap: 2em;
 }
-.create-employee__form__fieldset {
+.employee-form__fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1270,7 +1253,48 @@ body, select, input {
   padding: 2rem;
   border: none;
 }
-.create-employee__form__fieldset__wrapper {
+.employee-form__fieldset legend {
+  font-size: 18px;
+  padding: 0.4em 1.3em;
+  border-radius: 0.5rem;
+  background: #333333;
+  color: white;
+}
+.employee-form__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+.employee-form__submit__button {
+  border: none;
+  padding: 0.4em 1.3em;
+  background-color: #7E8C11;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+.employee-form__submit__button:hover {
+  background: #96A61B;
+  -webkit-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+}
+.employee-form__submit__button--invalid {
+  pointer-events: none;
+  background: #cccccc;
+}
+
+.input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,73 +1306,84 @@ body, select, input {
       -ms-flex: 1;
           flex: 1;
 }
-.create-employee__form__fieldset__wrapper label {
+.input-wrapper label {
   margin-right: 1em;
   margin-bottom: 0.3em;
 }
-.create-employee__form__fieldset__wrapper__input {
+.input-wrapper__input {
   border: none;
   padding: 0.3rem 0.5rem;
   background-color: #f2f2f2;
   border-radius: 0.5rem;
   font-size: 1em;
 }
-.create-employee__form__fieldset__wrapper__input:focus {
+.input-wrapper__input:focus {
   outline: 2px solid #667309;
   background-color: #EAF2CE;
 }
-.create-employee__form__fieldset__wrapper__input--valid {
+.input-wrapper__input--valid {
   background-color: #EAF2CE;
 }
-.create-employee__form__fieldset__wrapper__input--error {
+.input-wrapper__input--error {
   background-color: #ffe6e6;
 }
-.create-employee__form__fieldset__wrapper__input--error:focus {
+.input-wrapper__input--error:focus {
   outline: 2px solid #e60000;
   background-color: #ffe6e6;
 }
-.create-employee__form__fieldset__wrapper__error {
+.input-wrapper__error {
   font-size: 12px;
   margin-top: 0.3rem;
   color: #FF0C03;
 }
-.create-employee__form__fieldset__wrapper select {
-  border: none;
-  padding: 0.3em 0.5em;
-  background-color: #f2f2f2;
-  border-radius: 0.5em;
+
+.date-widget .rw-popup {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-.create-employee__form__fieldset legend {
-  font-size: 18px;
-  padding: 0.4em 1.3em;
-  border-radius: 0.5rem;
-  background: #333333;
-  color: white;
+
+.inputDate-wrapper__input.rw-state-focus .rw-input {
+  background-color: #EAF2CE;
 }
-.create-employee__form__submit {
+.inputDate-wrapper__input .rw-popup {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.inputDate-wrapper__input .rw-widget-picker {
+  grid-template: 1fr/1fr 3rem;
+}
+.inputDate-wrapper__input--error .rw-picker-btn:hover {
+  background-color: #ffb3b3;
+}
+.inputDate-wrapper__input--error.rw-state-focus .rw-widget-picker {
+  border-color: #e60000;
+}
+.inputDate-wrapper__input--error.rw-state-focus .rw-widget-picker .rw-input {
+  background-color: #ffe6e6;
+}
+.inputDate-wrapper__input--error.rw-state-focus .rw-widget-picker .rw-picker-btn:hover {
+  background-color: #ffe6e6;
+}
+.inputDate-wrapper__input--error .rw-input {
+  background-color: #ffe6e6;
+}
+.inputDate-wrapper__input--error .rw-input + button {
+  background-color: #ffe6e6;
+}
+.inputDate-wrapper__error {
+  font-size: 12px;
+  margin-top: 0.3rem;
+  color: #FF0C03;
+}
+
+.create-employee {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 100%;
-}
-.create-employee__form__submit__button {
-  border: none;
-  padding: 0.4em 1.3em;
-  background-color: #7E8C11;
-  border-radius: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 14px;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-}
-.create-employee__form__submit__button:hover {
-  background: #96A61B;
-  -webkit-transition: background 0.5s ease-in-out;
-  -o-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
+  gap: 2em;
 }/*# sourceMappingURL=main.css.map */
