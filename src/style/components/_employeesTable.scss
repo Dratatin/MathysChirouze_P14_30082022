@@ -1,0 +1,82 @@
+.employee-table {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2em;
+    .table-ctn {
+        border-radius: 0.5em;
+        .table {
+            @media screen and (min-width: 768px) {
+                min-width: 650;
+            }
+            @media screen and (max-width: 768px) {
+                display: flex;
+                overflow: auto;
+            }
+            &__tableHead {
+                @media screen and (max-width: 768px) {
+                    position: sticky;
+                    left: 0;
+                }
+                &__tableRow {
+                    background-color: $greyDarken;
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    &__tableCell {
+                        color: #fff;
+                        line-height: 1.5em;
+                        white-space: nowrap;
+                    }
+                }
+            }
+            &__tableBody {
+                @media screen and (max-width: 768px) {
+                    flex: 1;
+                }
+                &__tableRow {
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    &__tableCell {
+                        line-height: 1.5em;
+                        border-color: $greyLight;
+                        @media screen and (max-width: 768px) {
+                            white-space: nowrap;
+                            background-color: $lightDark;
+                            &:last-child {
+                                border-bottom:0;
+                            }
+                        }
+                    }
+                    @media screen and (min-width: 768px) {
+                        &:hover {
+                            background: $primaryLightest;
+                        }
+                        &:nth-of-type(odd) {
+                            background-color: $lightDark;
+                            &:hover {
+                                background: $primaryLightest;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .table-pagination {
+        .MuiInputBase-root {
+            background: $lightDark;
+            border-radius: 0.5em;
+        }
+    }
+}
+
+.MuiPopover-root {
+    .MuiPaper-root {
+        box-shadow: none;
+    }
+}

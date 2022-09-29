@@ -6,7 +6,8 @@ import InputDateWrapper from "./InputDateWrapper";
 import InputDropdownWrapper from "./InputDropdownWrapper"
 import useEmployeeStore from "../utils/EmployeeContext";
 
-function EmployeeForm() {
+
+function EmployeeForm({ openDialog }) {
     const { state, setEmployee } = useEmployeeStore()
     const initialState = {
         firstName: {
@@ -55,8 +56,16 @@ function EmployeeForm() {
             valid: false
         }
     }
-    const [inputs, setInputs] = useState(initialState)
-    const [formValid, setFormValid] = useState(false)
+    const [inputs, setInputs] = useState(initialState);
+    const [formValid, setFormValid] = useState(false);
+
+    const formatDate = (date) => {
+        return `${date.toLocaleDateString(undefined, { // you can use undefined as first argument
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+        })}`
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -65,15 +74,16 @@ function EmployeeForm() {
             setEmployee({
                 firstName: inputs.firstName.value,
                 lastName: inputs.lastName.value,
-                birthdate: inputs.birthdate.value,
-                startDate: inputs.startDate.value,
-                departements: inputs.departements.value,
+                birthdate: formatDate(inputs.birthdate.value),
+                startDate: formatDate(inputs.startDate.value),
+                departement: inputs.departements.value,
                 state: inputs.state.value,
                 street: inputs.street.value,
                 city: inputs.city.value,
                 zipCode: inputs.zipCode.value
             })
             setFormValid(false)
+            openDialog()
         }
     }
 

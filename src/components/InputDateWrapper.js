@@ -3,8 +3,8 @@ import DatePicker from "react-widgets/DatePicker"
 function InputDateWrapper({ children, inputs, setInputs, name }) {
     const handleChange = (e, name) => {
         if (e !== null) {
-            const year = e.getFullYear()
-            const maxStartDate = new Date().getFullYear() + 1
+            const year = e.getFullYear();
+            const maxStartDate = new Date().getFullYear() + 1;
             if ((Object.prototype.toString.call(e) !== '[object Date]' || year < 1900 || year > 2010) && name === "birthdate") {
                 setInputs({
                     ...inputs,
@@ -56,7 +56,8 @@ function InputDateWrapper({ children, inputs, setInputs, name }) {
         <div className="inputDate-wrapper">
             <label htmlFor={name}>{children}</label>
             <DatePicker
-                valueFormat={{ dateStyle: "medium" }}
+                valueEditFormat={{ dateStyle: "short" }}
+                valueDisplayFormat={{ dateStyle: "medium" }}
                 onChange={(e) => handleChange(e, name)}
                 value={inputs[name].value}
                 className={`inputDate-wrapper__input ${inputs[name].error

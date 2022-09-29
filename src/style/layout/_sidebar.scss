@@ -1,52 +1,111 @@
 .header {
     display: flex;
     align-items: center;
+    background: white;
     justify-content: space-between;
     flex-direction: column;
-    width: 15vw;
     height: 100vh;
     min-width: 205px;
     padding: 2em 0;
     position: sticky;
     left: 0;
-    top: 0;
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
+    @media screen and (max-width: 768px) {
+        position: relative;
+        flex-direction: row;
         align-items: center;
-        &__title {
-            margin-bottom: 2em;
-            &__point {
-                font-size: 2em;
-                color: $primaryLighten;
+        height: 10vh;
+        min-width: 300px;
+        margin: 0 1em;
+        padding: 1em;
+        border-radius: 0 0 0.5em 0.5em;
+    }
+    @media screen and (max-width: 415px) {
+        padding: 1.5em;
+    }
+    &__title {
+        margin-bottom: 2em;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 0;
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            padding: 0.5em 1em;
+            background: #fff;
+            border-radius: 0.5em;
+            h1 {
+                font-size: 16px;
+
             }
         }
-        &__nav {
+        &__point {
+            font-size: 2em;
+            color: $primaryLighten;
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-bottom: auto;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 0;
+            flex: 1;
+        }
+        &__list {
             display: flex;
-            align-items: center;
-            &__list {
-                display: flex;
-                flex-direction: column;
-                a {
-                    padding: 0.6em 1em;
-                    margin: 0.4em;
-                    background: white;
-                    position: relative;
-                    border-radius: $border-radius;
-                    display: block;
-                    text-align: center;
+            flex-direction: column;
+            @media screen and (max-width: 768px) {
+                flex-direction: row;
+                font-size: 14px;
+                justify-content: space-between;
+            }
+            @media screen and (max-width: 415px) {
+                flex: 1;
+                justify-content: space-around;
+            }
+            a {
+                padding: 0.6em 1em;
+                margin: 0.4em;
+                background: white;
+                position: relative;
+                border-radius: $border-radius;
+                display: block;
+                text-align: center;
+                color: #000;
+                text-decoration: none;
+                font-weight: 600;
+                &.active {
+                    color: $primaryLighten;
+                }
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                }
+                @media screen and (min-width: 768px) {
                     &:hover {
                         background: $lightDark;
                         transition: background 0.5s ease-in-out;
                     }
-                    &.active {
-                        color: $primaryLighten;
-                    }
+                }
+                @media screen and (max-width: 415px) {
+                    padding: 0.5em;
                 }
             }
         }
-        &__company-logo {
+    }
+    &__logo {
+        &__img {
             width: 120px;
+            @media screen and (max-width: 768px) {
+                width: 60px;
+            }
+            @media screen and (max-width: 415px) {
+                margin-bottom: 0;
+                position: absolute;
+                bottom: -20px;
+                right: 20px;
+                padding: 0.5em 1em;
+                background: #fff;
+                border-radius: 0.5em;
+            }
         }
     }
 }

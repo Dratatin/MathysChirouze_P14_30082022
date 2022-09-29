@@ -4,8 +4,20 @@
     padding: 2rem;
     display: flex;
     align-items: center;
+    &__title {
+        font-size: 21px;
+    }
     &__img {
         width: 2rem;
         margin-right: 5px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 1rem;
+        &__title {
+            font-size: 18px;
+        }
+        &__img {
+            width: 1.5rem;
+        }
     }
 }

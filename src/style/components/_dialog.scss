@@ -1,0 +1,16 @@
+.dialog {
+    .MuiPaper-root{
+        background: transparent;
+    }
+    &__content {
+        background: white;
+        border: 2px solid $primaryDarken;
+        border-radius: 0.5em;
+        &__link {
+            color: $primaryLighten;
+            &:hover {
+                color: $primaryDarken
+            }
+        }
+    }
+}
