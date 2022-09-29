@@ -13,17 +13,18 @@
         border-radius: $border-radius;
         font-size: 1em;
         &:focus {
-            outline: 2px solid $primaryDarken;
-            background-color: $primaryLightest;
+            outline: 1px solid $greyLight;
         }
         &--valid {
             background-color: $primaryLightest;
+            &:focus {
+                outline: 1px solid darken($primaryLightest, 20%);
+            }
         }
         &--error {
-            background-color: lighten(red, 45);
+            background-color: lighten(red, 45%);
             &:focus {
-                outline: 2px solid darken(red, 5);
-                background-color: lighten(red, 45);
+                outline: 1px solid lighten(red, 35%);
             }
         }
     }

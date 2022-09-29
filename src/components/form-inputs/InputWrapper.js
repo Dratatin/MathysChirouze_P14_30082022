@@ -99,7 +99,7 @@ function InputWrapper({ children, inputs, setInputs, name, type }) {
                 onKeyDown={type === "number" ? avoidBadInput : null}
                 className={`input-wrapper__input ${inputs[name].error
                     ? "input-wrapper__input--error"
-                    : !inputs[name].error && inputs[name].value.length > 0
+                    : inputs[name].valid
                         ? "input-wrapper__input--valid"
                         : ''}`}>
             </input>

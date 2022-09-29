@@ -78,5 +78,22 @@
 .MuiPopover-root {
     .MuiPaper-root {
         box-shadow: none;
+        border: 1px solid $greyLight;
+        background: $lightDark;
+        .MuiList-root {
+            .MuiButtonBase-root {
+                font-size: 14px;
+                &.Mui-selected {
+                    background: $primary;
+                    color: #fff;
+                    &:hover {
+                        background: $primary;
+                    }
+                }
+                &:hover {
+                    background: $primaryLightest;
+                }
+            }
+        }
     }
 }

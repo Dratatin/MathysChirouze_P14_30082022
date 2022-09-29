@@ -1,9 +1,9 @@
 import { statesName } from "../datas/states";
 import departements from "../datas/departements";
 import { useEffect, useState } from "react";
-import InputWrapper from "./InputWrapper";
-import InputDateWrapper from "./InputDateWrapper";
-import InputDropdownWrapper from "./InputDropdownWrapper"
+import InputWrapper from "./form-inputs/InputWrapper";
+import InputDateWrapper from "./form-inputs/InputDateWrapper";
+import InputDropdownWrapper from "./form-inputs/InputDropdownWrapper"
 import useEmployeeStore from "../utils/EmployeeContext";
 
 

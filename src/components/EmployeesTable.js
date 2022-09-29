@@ -1,10 +1,14 @@
+import Searchbar from "./Searchbar";
 import { TableContainer, TablePagination, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 import useEmployeeStore from "../utils/EmployeeContext";
 import { useState, Fragment, useEffect } from "react";
 import { useMediaQuery } from "../utils/useMediaQuery"
 
 function EmployeesTable() {
-    const { state } = useEmployeeStore()
+    const { state } = useEmployeeStore();
+
+    const [input, setInput] = useState("");
+    const [table, setTable] = useState(state);
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -17,6 +21,31 @@ function EmployeesTable() {
         setPage(0);
     };
 
+    const handleChange = (e) => {
+        const input = e.target.value
+        setInput(input);
+        if (input.length > 0) {
+            function searchTable(input) {
+                const filteredData = [];
+                state.forEach(element => {
+                    for (const property in element) {
+                        if (element[property].match(input)) {
+                            filteredData.push(element)
+                            break
+                        }
+                    }
+                });
+                setTable(filteredData)
+            }
+            searchTable(input)
+        }
+        else {
+            setTable(state)
+        }
+
+    }
+
+
     const isBreakpoint = useMediaQuery(765)
     useEffect(() => {
         if (isBreakpoint) {
@@ -26,9 +55,11 @@ function EmployeesTable() {
         setRowsPerPage(5)
     }, [isBreakpoint])
 
+
     return (
         <div className="employee-table">
-            {state.length > 0 ?
+            <Searchbar handleChange={handleChange} input={input} />
+            {table.length > 0 ?
                 <Fragment>
                     <TableContainer className="table-ctn">
                         <Table className="table" aria-label="simple table">
@@ -47,8 +78,8 @@ function EmployeesTable() {
                             </TableHead>
                             <TableBody className="table__tableBody">
                                 {(rowsPerPage > 0
-                                    ? state.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                    : state
+                                    ? table.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                                    : table
                                 ).map((employee) => (
                                     <TableRow
                                         key={employee.firstName}
@@ -72,7 +103,7 @@ function EmployeesTable() {
                         <TablePagination
                             rowsPerPageOptions={[{ label: 'All', value: -1 }]}
                             component="div"
-                            count={state.length}
+                            count={table.length}
                             rowsPerPage={rowsPerPage}
                             page={page}
                             onPageChange={handleChangePage}
@@ -83,7 +114,7 @@ function EmployeesTable() {
                         <TablePagination
                             rowsPerPageOptions={[5, 10, 15, { label: 'All', value: -1 }]}
                             component="div"
-                            count={state.length}
+                            count={table.length}
                             rowsPerPage={rowsPerPage}
                             page={page}
                             onPageChange={handleChangePage}

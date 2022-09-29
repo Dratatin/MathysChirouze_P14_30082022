@@ -19,9 +19,6 @@
         padding: 1em;
         border-radius: 0 0 0.5em 0.5em;
     }
-    @media screen and (max-width: 415px) {
-        padding: 1.5em;
-    }
     &__title {
         margin-bottom: 2em;
         @media screen and (max-width: 768px) {
@@ -53,6 +50,8 @@
         &__list {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            margin: 0.5em;
             @media screen and (max-width: 768px) {
                 flex-direction: row;
                 font-size: 14px;
@@ -62,31 +61,33 @@
                 flex: 1;
                 justify-content: space-around;
             }
-            a {
-                padding: 0.6em 1em;
-                margin: 0.4em;
-                background: white;
-                position: relative;
-                border-radius: $border-radius;
-                display: block;
-                text-align: center;
-                color: #000;
-                text-decoration: none;
-                font-weight: 600;
-                &.active {
-                    color: $primaryLighten;
-                }
-                @media screen and (max-width: 768px) {
-                    margin: 0;
-                }
-                @media screen and (min-width: 768px) {
-                    &:hover {
-                        background: $lightDark;
-                        transition: background 0.5s ease-in-out;
+            &__elem {
+                display: flex;
+                a {
+                    padding: 0.5em 0.8em;
+                    margin: 0.4em;
+                    background: white;
+                    position: relative;
+                    border-radius: $border-radius;
+                    text-align: center;
+                    color: #000;
+                    text-decoration: none;
+                    font-weight: 600;
+                    &.active {
+                        color: $primaryLighten;
                     }
-                }
-                @media screen and (max-width: 415px) {
-                    padding: 0.5em;
+                    @media screen and (max-width: 768px) {
+                        margin: 0;
+                    }
+                    @media screen and (min-width: 768px) {
+                        &:hover {
+                            background: $lightDark;
+                            transition: background 0.5s ease-in-out;
+                        }
+                    }
+                    @media screen and (max-width: 415px) {
+                        padding: 0.5em;
+                    }
                 }
             }
         }

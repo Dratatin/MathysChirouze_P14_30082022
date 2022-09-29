@@ -9,10 +9,10 @@ function Sidebar() {
             </div>
             <nav className='header__nav'>
                 <ul className='header__nav__list'>
-                    <li>
+                    <li className='header__nav__list__elem'>
                         <NavLink to='/create-employee' >Create Employee</NavLink>
                     </li>
-                    <li>
+                    <li className='header__nav__list__elem'>
                         <NavLink to='/employee-list'>Employee List</NavLink>
                     </li>
                 </ul>

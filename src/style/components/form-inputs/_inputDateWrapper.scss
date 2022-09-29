@@ -19,7 +19,7 @@
             }
             &.rw-state-focus {
                 .rw-widget-picker {
-                    border-color: darken(red, 5);
+                    border-color: lighten(red, 35%);
                     .rw-input {
                         background-color: lighten(red, 45);
                     }

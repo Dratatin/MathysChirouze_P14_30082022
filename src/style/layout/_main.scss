@@ -3,6 +3,7 @@
     flex: 1;
     padding: 3em;
     overflow: auto;
+    height: 100vh;
     @media screen and (max-width: 768px) {
         padding: 0;
         margin: 3em 1em 8em 1em;

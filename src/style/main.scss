@@ -18,9 +18,10 @@
 @import 'components/employeeHeading';
 @import 'components/employeeForm';
 @import 'components/employeesTable';
-@import 'components/inputWrapper';
-@import 'components/inputDropdownWrapper';
-@import 'components/inputDateWrapper';
+@import 'components/form-inputs/inputWrapper';
+@import 'components/form-inputs/inputDropdownWrapper';
+@import 'components/form-inputs/inputDateWrapper';
+@import 'components/searchbar';
 @import 'components/dialog';
 
 //pages

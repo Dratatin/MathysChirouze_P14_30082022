@@ -1,0 +1,23 @@
+.searchbar {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    &__label {
+        display: flex;
+        align-items: center;
+        margin: 0.5em;
+        img {
+            width: 15px;
+        }
+    }
+    &__input {
+        border: none;
+        padding: 0.3rem 0.5rem;
+        background-color: $lightDark;
+        border-radius: $border-radius;
+        font-size: 1em;
+        &:focus {
+            outline: 1px solid $greyLight;
+        }
+    }
+}

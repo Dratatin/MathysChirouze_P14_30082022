@@ -15,7 +15,6 @@ ul {
 #root {
     display: flex;
     background: $lightDark;
-    overflow: auto;
     min-height: 100vh;
     // max-width: 72rem;
     @media screen and (max-width: 768px) {
