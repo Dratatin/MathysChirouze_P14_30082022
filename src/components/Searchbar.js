@@ -5,7 +5,7 @@ function Searchbar({ input, handleChange }) {
         <div className="searchbar">
             <input
                 className="searchbar__input"
-                type="search"
+                type="text"
                 id="search"
                 name="search"
                 placeholder="search..."

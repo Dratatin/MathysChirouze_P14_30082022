@@ -4,6 +4,7 @@
     padding: 2rem;
     display: flex;
     align-items: center;
+    @include box-shadow;
     &__title {
         font-size: 21px;
     }

@@ -1,0 +1,10 @@
+@mixin box-shadow {
+    box-shadow: 0px 2px 5px 2px lighten($greyLight, 10%);
+    @media screen and (max-width: 768px) {
+        box-shadow: 0px 1px 3px 2px lighten($greyLight, 10%);
+    }
+}
+
+@mixin input-box-shadow {
+    box-shadow: inset 0px 1px 3px 1px lighten($greyLight, 10%);
+}

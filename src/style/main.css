@@ -147,16 +147,16 @@ fieldset[disabled] .rw-widget {
 .rw-state-focus .rw-widget-picker {
   background-color: #EAF2CE;
   border-color: #c7dd7d;
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
   -webkit-transition: unset;
   -o-transition: unset;
   transition: unset;
 }
 
 .rw-state-focus .rw-widget-picker.rw-widget-input {
-  -webkit-box-shadow: 0 0 0 0, 0 0 0 0;
-          box-shadow: 0 0 0 0, 0 0 0 0;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6, 0 0 0 0;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6, 0 0 0 0;
 }
 
 .rw-input {
@@ -360,8 +360,8 @@ fieldset[disabled] .rw-widget {
 .rw-listbox.rw-state-focus {
   background-color: #EAF2CE;
   border-color: #c7dd7d;
-  -webkit-box-shadow: 0 0 0 0, 0 0 0 0;
-          box-shadow: 0 0 0 0, 0 0 0 0;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6, 0 0 0 0;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6, 0 0 0 0;
   -webkit-transition: unset;
   -o-transition: unset;
   transition: unset;
@@ -611,8 +611,8 @@ fieldset[disabled] .rw-widget {
 
 .rw-multiselect-tag.rw-state-focus {
   z-index: 1;
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
   -webkit-transition: unset;
   -o-transition: unset;
   transition: unset;
@@ -688,8 +688,8 @@ fieldset[disabled] .rw-widget {
 .rw-cell:focus,
 .rw-calendar-btn:focus {
   z-index: 1;
-  -webkit-box-shadow: 0 0 0 0;
-          box-shadow: 0 0 0 0;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
   -webkit-transition: unset;
   -o-transition: unset;
   transition: unset;
@@ -1110,6 +1110,7 @@ ul {
   display: flex;
   background: #f2f2f2;
   min-height: 100vh;
+  overflow: auto;
 }
 @media screen and (max-width: 768px) {
   #root {
@@ -1318,6 +1319,14 @@ body, select, input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
+          box-shadow: 0px 2px 5px 2px #e6e6e6;
+}
+@media screen and (max-width: 768px) {
+  .section-heading {
+    -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
+            box-shadow: 0px 1px 3px 2px #e6e6e6;
+  }
 }
 .section-heading__title {
   font-size: 21px;
@@ -1365,10 +1374,18 @@ body, select, input {
   border-radius: 0.5rem;
   padding: 2rem;
   border: none;
+  -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
+          box-shadow: 0px 2px 5px 2px #e6e6e6;
+}
+@media screen and (max-width: 768px) {
+  .employee-form__fieldset {
+    -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
+            box-shadow: 0px 1px 3px 2px #e6e6e6;
+  }
 }
 .employee-form__fieldset legend {
   font-size: 18px;
-  padding: 0.4em 1.3em;
+  padding: 0.5em 0.8em;
   border-radius: 0.5rem;
   background: #333333;
   color: white;
@@ -1427,6 +1444,14 @@ body, select, input {
   background: white;
   border-radius: 0.5rem;
   padding: 2em;
+  -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
+          box-shadow: 0px 2px 5px 2px #e6e6e6;
+}
+@media screen and (max-width: 768px) {
+  .employee-table {
+    -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
+            box-shadow: 0px 1px 3px 2px #e6e6e6;
+  }
 }
 .employee-table .table-ctn {
   border-radius: 0.5em;
@@ -1490,6 +1515,7 @@ body, select, input {
 .employee-table .table-ctn .table__tableBody__tableRow__tableCell {
   line-height: 1.5em;
   border-color: #cccccc;
+  text-transform: capitalize;
 }
 @media screen and (max-width: 768px) {
   .employee-table .table-ctn .table__tableBody__tableRow__tableCell {
@@ -1560,7 +1586,9 @@ body, select, input {
   font-size: 1em;
 }
 .input-wrapper__input:focus {
-  outline: 1px solid #cccccc;
+  outline: unset;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
 }
 .input-wrapper__input--valid {
   background-color: #EAF2CE;
@@ -1581,16 +1609,30 @@ body, select, input {
 }
 
 .dropdown-widget .rw-popup {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
+          box-shadow: 0px 2px 5px 2px #e6e6e6;
+}
+@media screen and (max-width: 768px) {
+  .dropdown-widget .rw-popup {
+    -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
+            box-shadow: 0px 1px 3px 2px #e6e6e6;
+  }
 }
 
 .inputDate-wrapper__input.rw-state-focus .rw-input {
   background-color: #EAF2CE;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
 }
 .inputDate-wrapper__input .rw-popup {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
+          box-shadow: 0px 2px 5px 2px #e6e6e6;
+}
+@media screen and (max-width: 768px) {
+  .inputDate-wrapper__input .rw-popup {
+    -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
+            box-shadow: 0px 1px 3px 2px #e6e6e6;
+  }
 }
 .inputDate-wrapper__input .rw-widget-picker {
   grid-template: 1fr/1fr 3rem;
@@ -1648,7 +1690,9 @@ body, select, input {
   font-size: 1em;
 }
 .searchbar__input:focus {
-  outline: 1px solid #cccccc;
+  outline: unset;
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
 }
 
 .dialog .MuiPaper-root {

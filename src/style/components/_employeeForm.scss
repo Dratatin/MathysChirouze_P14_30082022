@@ -12,9 +12,10 @@
         border-radius: $border-radius;
         padding: 2rem;
         border: none;
+        @include box-shadow;
         legend {
             font-size: 18px;
-            padding: 0.4em 1.3em;
+            padding: 0.5em 0.8em;
             border-radius: $border-radius;
             background: $greyDarken;
             color: white;

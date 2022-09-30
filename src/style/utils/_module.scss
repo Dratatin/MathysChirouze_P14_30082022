@@ -3,7 +3,7 @@
   $widget-border-color: $greyLight,
   $widget-border-radius: $border-radius,
   $widget-hover-bg: $primaryLightest,
-  $widget-focus-box-shadow: 0 0 0 0,
+  $widget-focus-box-shadow: inset 0px 1px 3px 1px lighten($greyLight, 10%),
   $widget-focus-transition: unset,
   $widget-bg: $lightDark,
 

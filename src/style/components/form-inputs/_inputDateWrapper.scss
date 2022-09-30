@@ -3,10 +3,11 @@
         &.rw-state-focus {
             .rw-input {
                     background-color: $primaryLightest;  
+                    @include input-box-shadow
                 }
             }
         .rw-popup {
-            box-shadow: none;
+            @include box-shadow;
         }
         .rw-widget-picker {
             grid-template: 1fr/1fr 3rem;

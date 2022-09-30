@@ -1,4 +1,4 @@
-const DEFAULT_EMPLOYEES_LIST = [
+const employeeList = [
     {
         firstName: "Jolie",
         lastName: "Nguyen",
@@ -231,5 +231,8 @@ const DEFAULT_EMPLOYEES_LIST = [
         departement: "Human Resources"
     },
 ]
+
+let DEFAULT_EMPLOYEES_LIST = employeeList.map(employee => Object.fromEntries(Object.entries(employee).map(
+    ([key, value]) => [key, typeof value == 'string' ? value.toLowerCase() : value])));
 
 export default DEFAULT_EMPLOYEES_LIST

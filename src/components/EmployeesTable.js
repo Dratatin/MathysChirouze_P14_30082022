@@ -22,8 +22,8 @@ function EmployeesTable() {
     };
 
     const handleChange = (e) => {
-        const input = e.target.value
-        setInput(input);
+        const input = e.target.value.toLowerCase()
+        setInput(e.target.value); //preserve upercase characters in input
         if (input.length > 0) {
             function searchTable(input) {
                 const filteredData = [];

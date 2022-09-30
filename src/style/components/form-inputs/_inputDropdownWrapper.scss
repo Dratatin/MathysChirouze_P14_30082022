@@ -1,5 +1,5 @@
 .dropdown-widget {
     .rw-popup {
-        box-shadow: none;
+        @include box-shadow;
     }
 }

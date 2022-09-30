@@ -59,12 +59,18 @@ function EmployeeForm({ openDialog }) {
     const [inputs, setInputs] = useState(initialState);
     const [formValid, setFormValid] = useState(false);
 
-    const formatDate = (date) => {
-        return `${date.toLocaleDateString(undefined, { // you can use undefined as first argument
-            year: "numeric",
-            month: "2-digit",
-            day: "2-digit",
-        })}`
+    const formatInput = (input) => {
+        if (typeof input === "object") {
+            return `${input.toLocaleDateString(undefined, { // you can use undefined as first argument
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+            })}`
+        }
+        else if (typeof input === "string") {
+            return input.toLowerCase()
+        }
+
     }
 
     const handleSubmit = (e) => {
@@ -72,15 +78,15 @@ function EmployeeForm({ openDialog }) {
         if (formValid) {
             setInputs(initialState)
             setEmployee({
-                firstName: inputs.firstName.value,
-                lastName: inputs.lastName.value,
-                birthdate: formatDate(inputs.birthdate.value),
-                startDate: formatDate(inputs.startDate.value),
-                departement: inputs.departements.value,
-                state: inputs.state.value,
-                street: inputs.street.value,
-                city: inputs.city.value,
-                zipCode: inputs.zipCode.value
+                firstName: formatInput(inputs.firstName.value),
+                lastName: formatInput(inputs.lastName.value),
+                birthdate: formatInput(inputs.birthdate.value),
+                startDate: formatInput(inputs.startDate.value),
+                departement: formatInput(inputs.departements.value),
+                state: formatInput(inputs.state.value),
+                street: formatInput(inputs.street.value),
+                city: formatInput(inputs.city.value),
+                zipCode: formatInput(inputs.zipCode.value)
             })
             setFormValid(false)
             openDialog()

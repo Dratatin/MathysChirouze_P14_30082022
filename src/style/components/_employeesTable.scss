@@ -4,6 +4,7 @@
     background: white;
     border-radius: 0.5rem;
     padding: 2em;
+    @include box-shadow;
     .table-ctn {
         border-radius: 0.5em;
         .table {
@@ -44,6 +45,7 @@
                     &__tableCell {
                         line-height: 1.5em;
                         border-color: $greyLight;
+                        text-transform: capitalize;
                         @media screen and (max-width: 768px) {
                             white-space: nowrap;
                             background-color: $lightDark;
