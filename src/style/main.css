@@ -1608,15 +1608,33 @@ body, select, input {
   color: #FF0C03;
 }
 
-.dropdown-widget .rw-popup {
+.dropdown__btn {
+  background-color: #f2f2f2;
+  padding: 0.3rem 0.5rem;
+}
+.dropdown__btn:focus {
+  -webkit-box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+          box-shadow: inset 0px 1px 3px 1px #e6e6e6;
+  background-color: #EAF2CE;
+  outline: 1px solid #c7dd7d;
+}
+.dropdown__list {
   -webkit-box-shadow: 0px 2px 5px 2px #e6e6e6;
           box-shadow: 0px 2px 5px 2px #e6e6e6;
+  background-color: #f2f2f2;
 }
 @media screen and (max-width: 768px) {
-  .dropdown-widget .rw-popup {
+  .dropdown__list {
     -webkit-box-shadow: 0px 1px 3px 2px #e6e6e6;
             box-shadow: 0px 1px 3px 2px #e6e6e6;
   }
+}
+.dropdown__list__item[aria-selected=true] .dropdown__list__item__content {
+  background-color: #EAF2CE;
+}
+.dropdown__list__item.chosen .dropdown__list__item__content {
+  background-color: #7E8C11;
+  color: white;
 }
 
 .inputDate-wrapper__input.rw-state-focus .rw-input {

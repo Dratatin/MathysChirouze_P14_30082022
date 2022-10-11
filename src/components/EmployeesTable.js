@@ -52,15 +52,16 @@ function EmployeesTable() {
             setRowsPerPage(1)
             return
         }
+        setPage(0)
         setRowsPerPage(5)
     }, [isBreakpoint])
 
 
     return (
         <div className="employee-table">
-            <Searchbar handleChange={handleChange} input={input} />
             {table.length > 0 ?
                 <Fragment>
+                    <Searchbar handleChange={handleChange} input={input} />
                     <TableContainer className="table-ctn">
                         <Table className="table" aria-label="simple table">
                             <TableHead className="table__tableHead">

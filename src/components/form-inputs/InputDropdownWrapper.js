@@ -1,6 +1,6 @@
-import { DropdownList } from "react-widgets";
+import { Dropdown } from "@dratatin/dropdown-react";
 
-function InputDropdownWrapper({ children, inputs, setInputs, name, data }) {
+function InputDropdownWrapper({ children, inputs, setInputs, name, datas }) {
     const handleChange = (e, name) => {
         setInputs({
             ...inputs,
@@ -13,11 +13,12 @@ function InputDropdownWrapper({ children, inputs, setInputs, name, data }) {
     return (
         <div>
             <label htmlFor={name}>{children}</label>
-            <DropdownList
-                data={data}
-                onChange={(e) => handleChange(e, name)}
+            <Dropdown
+                options={datas}
+                setValue={(e) => handleChange(e, name)}
                 value={inputs[name].value}
-                className="dropdown-widget"
+                name={name}
+                className="dropdown"
             />
         </div>
     )

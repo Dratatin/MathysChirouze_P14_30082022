@@ -8,7 +8,7 @@ import useEmployeeStore from "../utils/EmployeeContext";
 
 
 function EmployeeForm({ openDialog }) {
-    const { state, setEmployee } = useEmployeeStore()
+    const { setEmployee } = useEmployeeStore()
     const initialState = {
         firstName: {
             value: '',
@@ -105,10 +105,6 @@ function EmployeeForm({ openDialog }) {
         }
     }, [inputs])
 
-    useEffect(() => {
-        console.log(state)
-    }, [state])
-
     return (
         <form className="employee-form" onSubmit={handleSubmit}>
             <fieldset className="employee-form__fieldset">
@@ -116,13 +112,13 @@ function EmployeeForm({ openDialog }) {
                 <InputWrapper inputs={inputs} setInputs={setInputs} name="lastName" type="text">Last Name</InputWrapper>
                 <InputDateWrapper inputs={inputs} setInputs={setInputs} name="birthdate">Date of birth</InputDateWrapper>
                 <InputDateWrapper inputs={inputs} setInputs={setInputs} name="startDate">Start Date</InputDateWrapper>
-                <InputDropdownWrapper inputs={inputs} setInputs={setInputs} name="departements" data={departements}>Departements</InputDropdownWrapper>
+                <InputDropdownWrapper inputs={inputs} setInputs={setInputs} name="departements" datas={departements}>Departements</InputDropdownWrapper>
             </fieldset>
             <fieldset className="employee-form__fieldset">
                 <legend>Address</legend>
                 <InputWrapper inputs={inputs} setInputs={setInputs} name="street" type="text">Street</InputWrapper>
                 <InputWrapper inputs={inputs} setInputs={setInputs} name="city" type="text">City</InputWrapper>
-                <InputDropdownWrapper inputs={inputs} setInputs={setInputs} name="state" data={statesName}>State</InputDropdownWrapper>
+                <InputDropdownWrapper inputs={inputs} setInputs={setInputs} name="state" datas={statesName}>State</InputDropdownWrapper>
                 <InputWrapper inputs={inputs} setInputs={setInputs} name="zipCode" type="number">Zip Code</InputWrapper>
             </fieldset>
             <div className="employee-form__submit">

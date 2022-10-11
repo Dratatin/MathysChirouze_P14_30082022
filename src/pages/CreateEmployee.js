@@ -13,6 +13,7 @@ function CreateEmployee() {
     const handleClose = () => {
         setOpen(false);
     };
+
     return (
         <section className="create-employee">
             <EmployeeHeading img={profile} alt="profile">Create Employee </EmployeeHeading>

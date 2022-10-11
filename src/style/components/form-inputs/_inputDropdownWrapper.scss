@@ -1,5 +1,28 @@
-.dropdown-widget {
-    .rw-popup {
+.dropdown {
+    &__btn {
+        background-color: $lightDark;
+        padding: 0.3rem 0.5rem;
+        &:focus {
+            @include input-box-shadow;
+            background-color: $primaryLightest;
+            outline: 1px solid darken($primaryLightest, 20%);
+        }
+    }
+    &__list {
         @include box-shadow;
+        background-color: $lightDark;
+        &__item {
+            &[aria-selected="true"] {
+                .dropdown__list__item__content {
+                    background-color: $primaryLightest;
+                }
+            }
+            &.chosen {
+                .dropdown__list__item__content {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
     }
 }
