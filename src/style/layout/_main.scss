@@ -1,12 +1,9 @@
 .main {
-    min-width: 300px; // avoid overflow on flex element
-    flex: 1;
-    padding: 3em;
-    overflow: auto;
-    height: 100vh;
-    @media screen and (max-width: 768px) {
-        padding: 0;
-        margin: 3em 1em 8em 1em;
-        min-height: 90vh;
+    padding: 0;
+    margin: 3em 1em 4em 1em;
+    @media screen and (min-width: 768px) {
+        min-width: 300px; // avoid overflow on flex element
+        flex: 1;
+        margin: 3em;
     }
 }

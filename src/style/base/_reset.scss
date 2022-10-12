@@ -16,7 +16,7 @@ ul {
     display: flex;
     background: $lightDark;
     min-height: 100vh;
-    overflow: auto;
+    min-width: 340px;
     // max-width: 72rem;
     @media screen and (max-width: 768px) {
         flex-direction: column;
