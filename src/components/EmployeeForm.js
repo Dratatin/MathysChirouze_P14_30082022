@@ -6,7 +6,6 @@ import InputDateWrapper from "./form-inputs/InputDateWrapper";
 import InputDropdownWrapper from "./form-inputs/InputDropdownWrapper"
 import useEmployeeStore from "../utils/EmployeeContext";
 
-
 function EmployeeForm({ openDialog }) {
     const { setEmployee } = useEmployeeStore()
     const initialState = {

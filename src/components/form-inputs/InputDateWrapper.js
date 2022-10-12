@@ -54,11 +54,12 @@ function InputDateWrapper({ children, inputs, setInputs, name }) {
 
     return (
         <div className="inputDate-wrapper">
-            <label htmlFor={name}>{children}</label>
+            <label id={name + "_label"} htmlFor={name}>{children}</label>
             <DatePicker
                 valueEditFormat={{ dateStyle: "short" }}
                 valueDisplayFormat={{ dateStyle: "medium" }}
                 onChange={(e) => handleChange(e, name)}
+                aria-labelledby={name + "_label"}
                 value={inputs[name].value}
                 className={`inputDate-wrapper__input ${inputs[name].error
                     ? "inputDate-wrapper__input--error"

@@ -1275,10 +1275,12 @@ body, select, input {
 }
 .header__logo__img {
   width: 120px;
+  height: 120px;
 }
 @media screen and (max-width: 768px) {
   .header__logo__img {
     width: 60px;
+    height: 60px;
   }
 }
 @media screen and (max-width: 415px) {
@@ -1331,6 +1333,7 @@ body, select, input {
 }
 .section-heading__img {
   width: 2rem;
+  height: 2rem;
   margin-right: 5px;
 }
 @media screen and (max-width: 768px) {
@@ -1342,6 +1345,7 @@ body, select, input {
   }
   .section-heading__img {
     width: 1.5rem;
+    height: 1.5rem;
   }
 }
 

@@ -21,15 +21,15 @@ function EmployeesTable() {
         setPage(0);
     };
 
-    const handleChange = (e) => {
-        const input = e.target.value.toLowerCase()
-        setInput(e.target.value); //preserve upercase characters in input
-        if (input.length > 0) {
-            function searchTable(input) {
+    const handleChangeInput = (e) => {
+        setInput(e.target.value)
+        const research = e.target.value.toLowerCase()
+        if (research.length > 0) {
+            function searchTable(research) {
                 const filteredData = [];
                 state.forEach(element => {
                     for (const property in element) {
-                        if (element[property].match(input)) {
+                        if (element[property].match(research)) {
                             filteredData.push(element)
                             break
                         }
@@ -37,7 +37,7 @@ function EmployeesTable() {
                 });
                 setTable(filteredData)
             }
-            searchTable(input)
+            searchTable(research)
         }
         else {
             setTable(state)
@@ -61,7 +61,7 @@ function EmployeesTable() {
         <div className="employee-table">
             {state.length > 0 ?
                 <Fragment>
-                    <Searchbar handleChange={handleChange} input={input} />
+                    <Searchbar handleChange={handleChangeInput} input={input} />
                     {table.length > 0 ?
                         <Fragment>
                             <TableContainer className="table-ctn">

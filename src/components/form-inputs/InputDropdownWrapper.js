@@ -12,13 +12,14 @@ function InputDropdownWrapper({ children, inputs, setInputs, name, datas }) {
     }
     return (
         <div>
-            <label htmlFor={name}>{children}</label>
+            <label id={name + "_label"} htmlFor={name}>{children}</label>
             <Dropdown
                 options={datas}
                 setValue={(e) => handleChange(e, name)}
                 value={inputs[name].value}
                 name={name}
                 className="dropdown"
+                labelledby={name + "_label"}
             />
         </div>
     )
