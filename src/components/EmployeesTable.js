@@ -89,7 +89,7 @@ function EmployeesTable() {
                                                 className="table__tableBody__tableRow"
                                             >
                                                 <TableCell className="table__tableBody__tableRow__tableCell">{employee.firstName}</TableCell>
-                                                <TableCell className="table__tableBody__tableRow__tableCell">{employee.lastName}test</TableCell>
+                                                <TableCell className="table__tableBody__tableRow__tableCell">{employee.lastName}</TableCell>
                                                 <TableCell className="table__tableBody__tableRow__tableCell">{employee.startDate}</TableCell>
                                                 <TableCell className="table__tableBody__tableRow__tableCell">{employee.departement}</TableCell>
                                                 <TableCell className="table__tableBody__tableRow__tableCell">{employee.birthdate}</TableCell>
