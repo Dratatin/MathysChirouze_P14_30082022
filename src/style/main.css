@@ -1280,7 +1280,7 @@ body, select, input {
 @media screen and (max-width: 768px) {
   .header__logo__img {
     width: 60px;
-    height: 45px;
+    height: 60px;
   }
 }
 @media screen and (max-width: 415px) {
@@ -1292,6 +1292,7 @@ body, select, input {
     padding: 0.5em 1em;
     background: #fff;
     border-radius: 0.5em;
+    height: 45px;
   }
 }
 

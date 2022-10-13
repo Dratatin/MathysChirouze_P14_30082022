@@ -42,7 +42,10 @@ function EmployeesTable() {
         else {
             setTable(state)
         }
+        if (page !== 0) {
+            setPage(0);
 
+        }
     }
 
 
