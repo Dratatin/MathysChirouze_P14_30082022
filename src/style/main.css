@@ -1158,7 +1158,7 @@ body, select, input {
         -ms-flex-align: center;
             align-items: center;
     height: 10vh;
-    min-width: 300px;
+    min-width: unset;
     margin: 0 1em;
     padding: 1em;
     border-radius: 0 0 0.5em 0.5em;
