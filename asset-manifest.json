@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/MathysChirouze_P14_30082022/static/css/main.e3fa752b.css",
+    "main.js": "/MathysChirouze_P14_30082022/static/js/main.54d02c1e.js",
+    "static/media/logo.jpg": "/MathysChirouze_P14_30082022/static/media/logo.944f00e0dea43f4b43b8.jpg",
+    "static/media/profiles.svg": "/MathysChirouze_P14_30082022/static/media/profiles.84eaa26e41d95d65a50997a580ffeeb7.svg",
+    "static/media/search.svg": "/MathysChirouze_P14_30082022/static/media/search.c7756312a4a904c0c4dcf0cfade9b04f.svg",
+    "static/media/profile.svg": "/MathysChirouze_P14_30082022/static/media/profile.2fd6e13003afbcc28f0392785fae8477.svg",
+    "index.html": "/MathysChirouze_P14_30082022/index.html",
+    "static/media/full-arrow.svg": "/MathysChirouze_P14_30082022/static/media/full-arrow.85c1fed7b59021fe7cfe9b461fe95a3e.svg",
+    "main.e3fa752b.css.map": "/MathysChirouze_P14_30082022/static/css/main.e3fa752b.css.map",
+    "main.54d02c1e.js.map": "/MathysChirouze_P14_30082022/static/js/main.54d02c1e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3fa752b.css",
+    "static/js/main.54d02c1e.js"
+  ]
+}
